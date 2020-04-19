@@ -11,3 +11,8 @@ def index(request):
     latest_question_list = Question.objects.order_by('id')[:20]
     context = {'latest_question_list': latest_question_list}
     return render(request, 'survey/index.html', context)
+
+
+def process(request):
+    print('Made it!')
+    return "Hi!"
