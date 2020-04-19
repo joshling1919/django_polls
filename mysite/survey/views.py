@@ -8,6 +8,12 @@ from .models import Answer, Question
 
 
 def index(request):
-    latest_question_list = Question.objects.order_by('id')[:20]
-    context = {'latest_question_list': latest_question_list}
-    return render(request, 'survey/index.html', context)
+    latest_question_list = Question.objects.order_by("id")[:20]
+    context = {"latest_question_list": latest_question_list}
+    return render(request, "survey/index.html", context)
+
+
+def vote(request):
+    data = request.POST.copy()
+    print(data)
+    return "H"

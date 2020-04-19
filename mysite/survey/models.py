@@ -13,6 +13,5 @@ class Answer(models.Model):
     def __str__(self):
             return self.answer_text
 class User(models.Model):
-    user_type = models.CharField(max_length = 200)
     def __str__(self):
             return self.answer_text
